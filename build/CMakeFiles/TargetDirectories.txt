@@ -1,0 +1,3 @@
+/home/katz/code/my_opengl_proj/build/CMakeFiles/my_opengl_proj.dir
+/home/katz/code/my_opengl_proj/build/CMakeFiles/edit_cache.dir
+/home/katz/code/my_opengl_proj/build/CMakeFiles/rebuild_cache.dir

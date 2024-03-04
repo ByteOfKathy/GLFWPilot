@@ -10,6 +10,10 @@ add_executable(my_opengl_proj
     src/main.cpp
     src/Sphere.cpp
     src/glad.c 
+    src/EBO.cpp
+    src/VAO.cpp
+    src/VBO.cpp
+    src/shaderClass.cpp
 )
 
 target_link_libraries(my_opengl_proj

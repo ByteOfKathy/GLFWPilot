@@ -1,21 +1,13 @@
+#define GLFW_INCLUDE_NONE
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "Sphere.h"
 
-// Vertex Shader source code
-const char* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"void main()\n"
-"{\n"
-"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-"}\0";
-//Fragment Shader source code
-const char* fragmentShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"void main()\n"
-"{\n"
-"   FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);\n"
-"}\n\0";
+// for triaging Sphere later
+// #include"shaderClass.h"
+// #include"VAO.h"
+// #include"VBO.h"
+// #include"EBO.h"
+// #include "Sphere.h"
 
 
 int main() {
@@ -31,10 +23,8 @@ int main() {
     // window creation
     GLFWwindow* window = glfwCreateWindow(640, 480, "la hee", NULL, NULL);
 
-    // shaders
-    // GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    // glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    
+    // Shader shaderProgram("default.vert", "default.frag");
+
     // ensure the window is created
     if (!window) {
         glfwTerminate();
@@ -46,15 +36,15 @@ int main() {
     glfwMakeContextCurrent(window);
 
     // math to draw a sphere using sections
-    Sphere sphere(1.0f, 32, 32);
+    // Sphere sphere(1.0f, 32, 32);
 
-    sphere.printSelf();
+    // sphere.printSelf();
 
     while (!glfwWindowShouldClose(window)) {
         // background color
         glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 
-        sphere.draw();
+        // sphere.draw();
 
         // swap buffers and poll events
         glClear(GL_COLOR_BUFFER_BIT);
